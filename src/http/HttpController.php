@@ -34,7 +34,7 @@ abstract class HttpController extends EventMediator
     /**
      * Opens the request.
      * 
-     * This method is allways called at the beggining of any request.
+     * This method is always called at the beggining of any request.
      * 
      * @return void
      */
