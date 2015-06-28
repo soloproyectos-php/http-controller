@@ -10,14 +10,14 @@ namespace soloproyectos\http;
 use soloproyectos\event\EventMediator;
 
 /**
- * Class Controller.
+ * Class HttpController.
  *
  * @package Http
  * @author  Gonzalo Chumillas <gchumillas@email.com>
  * @license https://github.com/soloproyectos-php/http-controller/blob/master/LICENSE The MIT License (MIT)
  * @link    https://github.com/soloproyectos-php/http-controller
  */
-abstract class Controller extends EventMediator
+abstract class HttpController extends EventMediator
 {
     /**
      * Constructor.
