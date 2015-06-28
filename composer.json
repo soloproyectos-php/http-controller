@@ -12,9 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.0",
-        "soloproyectos-php/array": "dev-master",
-        "soloproyectos-php/event": "dev-master",
-        "soloproyectos-php/http": "dev-master"
+        "soloproyectos-php/event": "dev-master"
     },
     "autoload": {
         "psr-4": {
