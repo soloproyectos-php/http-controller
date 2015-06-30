@@ -26,9 +26,7 @@ abstract class HttpController extends EventMediator
      */
     public function __construct()
     {
-        $this->open($_REQUEST);
-        $this->trigger($_SERVER["REQUEST_METHOD"], [$_REQUEST]);
-        $this->close($_REQUEST);
+        $this->apply();
     }
     
     /**
@@ -53,5 +51,17 @@ abstract class HttpController extends EventMediator
     public function close()
     {
         // no-op
+    }
+    
+    /**
+     * Processes the request.
+     * 
+     * @return void
+     */
+    public function apply()
+    {
+        $this->open($_REQUEST);
+        $this->trigger($_SERVER["REQUEST_METHOD"], [$_REQUEST]);
+        $this->close($_REQUEST);
     }
 }
