@@ -17,7 +17,7 @@ use soloproyectos\event\EventMediator;
  * @license https://github.com/soloproyectos-php/http-controller/blob/master/LICENSE The MIT License (MIT)
  * @link    https://github.com/soloproyectos-php/http-controller
  */
-abstract class HttpController extends EventMediator
+class HttpController extends EventMediator
 {
     /**
      * Opens the request.
