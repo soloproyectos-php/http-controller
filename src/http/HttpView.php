@@ -45,9 +45,10 @@ abstract class HttpView
     abstract public function getDocument();
     
     /**
-     * Makes the document.
+     * Makes and returns the document.
      * 
-     * This method captures any error thrown by the controller and appends it to the request header.
+     * This method processes the HTTP request and makes the document. Any error thrown by the controller
+     * or the 'getDocument' method is captured and returned as a HTTP status code.
      * 
      * @return mixed
      */
