@@ -20,16 +20,6 @@ use soloproyectos\event\EventMediator;
 abstract class HttpController extends EventMediator
 {
     /**
-     * Constructor.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->apply();
-    }
-    
-    /**
      * Opens the request.
      * 
      * This method is always called at the beggining of any request.
