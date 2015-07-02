@@ -20,12 +20,27 @@ use soloproyectos\event\EventMediator;
 class HttpController extends EventMediator
 {
     /**
+     * Initializes the controller.
+     * 
+     * This method is called at the beggining of the request.
+     * 
+     * @param string[] $params Request parameters
+     * 
+     * @return void
+     */
+    public function init($params)
+    {
+        // No-Op
+    }
+    
+    /**
      * Processes the request.
      * 
      * @return void
      */
     public function apply()
     {
+        $this->init($_REQUEST);
         $this->trigger($_SERVER["REQUEST_METHOD"], [$_REQUEST]);
     }
 }
