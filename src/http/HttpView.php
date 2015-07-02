@@ -8,7 +8,7 @@
  */
 namespace soloproyectos\http;
 use \Exception;
-use soloproyectos\http\exception\HttpException;
+use soloproyectos\http\exception\HttpClientException;
 use soloproyectos\http\HttpController;
 
 /**
@@ -64,7 +64,7 @@ abstract class HttpView
         }
         
         // gets the document body
-        if ($exception === null || $exception instanceof HttpException) {
+        if ($exception === null || $exception instanceof HttpClientException) {
             try {
                 $ret = $this->getDocument();
             } catch (Exception $e) {
@@ -75,7 +75,7 @@ abstract class HttpView
         // prepends the error message
         $message = "";
         if ($exception !== null) {
-            $code = $exception instanceof HttpException? "400": "500";
+            $code = $exception instanceof HttpClientException? "400": "500";
             $message = $exception->getMessage();
             header("HTTP/1.0 $code $message");
         }
