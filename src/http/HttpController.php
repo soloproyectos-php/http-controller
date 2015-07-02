@@ -20,38 +20,12 @@ use soloproyectos\event\EventMediator;
 class HttpController extends EventMediator
 {
     /**
-     * Opens the request.
-     * 
-     * This method is always called at the beggining of any request.
-     * 
-     * @return void
-     */
-    public function open()
-    {
-        // no-op
-    }
-    
-    /**
-     * Closes the request.
-     * 
-     * This function is always called at the end of any request.
-     * 
-     * @return void
-     */
-    public function close()
-    {
-        // no-op
-    }
-    
-    /**
      * Processes the request.
      * 
      * @return void
      */
     public function apply()
     {
-        $this->open($_REQUEST);
         $this->trigger($_SERVER["REQUEST_METHOD"], [$_REQUEST]);
-        $this->close($_REQUEST);
     }
 }
