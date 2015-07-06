@@ -6,7 +6,7 @@
  * @license https://github.com/soloproyectos-php/http-controller/blob/master/LICENSE The MIT License (MIT)
  * @link    https://github.com/soloproyectos-php/http-controllers
  */
-namespace soloproyectos\http;
+namespace soloproyectos\http\controller;
 use soloproyectos\event\EventMediator;
 
 /**
