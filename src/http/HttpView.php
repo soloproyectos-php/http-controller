@@ -45,7 +45,7 @@ abstract class HttpView
     abstract public function getDocument();
     
     /**
-     * Makes and returns the document.
+     * Makes the document.
      * 
      * This method processes the HTTP request and makes the document. Any error thrown by the controller
      * or the 'getDocument' method is captured and returned as a HTTP status code.
@@ -55,9 +55,9 @@ abstract class HttpView
     public function document()
     {
         $ret = "";
+        $exception = null;
         
         // processes the request
-        $exception = null;
         try {
             $this->controller->apply();
         } catch (Exception $e) {
@@ -73,10 +73,11 @@ abstract class HttpView
             }
         }
         
-        // prepends the error message
-        $message = "";
+        // attaches the error message
         if ($exception !== null) {
-            $code = $exception instanceof HttpClientException? "400": "500";
+            $code = $exception instanceof HttpClientException
+                ? "400"     // client-side error
+                : "500";    // server-side error
             $message = $exception->getMessage();
             header("HTTP/1.0 $code $message");
         }
