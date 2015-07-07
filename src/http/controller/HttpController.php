@@ -8,7 +8,8 @@
  */
 namespace soloproyectos\http\controller;
 use soloproyectos\event\EventMediator;
-use soloproyectos\http\controller\HttpControllerParamsTrait;
+use soloproyectos\http\controller\HttpControllerParamTrait;
+use soloproyectos\http\controller\HttpControllerSessionTrait;
 
 /**
  * Class HttpController.
@@ -21,6 +22,7 @@ use soloproyectos\http\controller\HttpControllerParamsTrait;
 class HttpController extends EventMediator
 {
     use HttpControllerParamTrait;
+    use HttpControllerSessionTrait;
     
     /**
      * Initializes the controller.
