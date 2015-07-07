@@ -47,7 +47,7 @@ class HttpController extends EventMediator
      */
     public function apply()
     {
-        $this->init($_REQUEST);
-        $this->trigger($_SERVER["REQUEST_METHOD"], [$_REQUEST]);
+        $this->init();
+        $this->trigger($_SERVER["REQUEST_METHOD"]);
     }
 }
