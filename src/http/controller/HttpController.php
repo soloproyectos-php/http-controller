@@ -10,6 +10,7 @@ namespace soloproyectos\http\controller;
 use soloproyectos\event\EventMediator;
 use soloproyectos\http\controller\HttpControllerParamTrait;
 use soloproyectos\http\controller\HttpControllerSessionTrait;
+use soloproyectos\http\controller\HttpControllerCookieTrait;
 
 /**
  * Class HttpController.
@@ -23,6 +24,7 @@ class HttpController extends EventMediator
 {
     use HttpControllerParamTrait;
     use HttpControllerSessionTrait;
+    use HttpControllerCookieTrait;
     
     /**
      * Initializes the controller.
