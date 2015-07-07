@@ -20,7 +20,7 @@ use soloproyectos\http\controller\HttpControllerParamsTrait;
  */
 class HttpController extends EventMediator
 {
-    use HttpControllerParamsTrait;
+    use HttpControllerParamTrait;
     
     /**
      * Initializes the controller.

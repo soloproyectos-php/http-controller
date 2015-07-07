@@ -10,14 +10,14 @@ namespace soloproyectos\http\controller;
 use soloproyectos\arr\Arr;
 
 /**
- * Class HttpControllerParamsTrait.
+ * Class HttpControllerParamTrait.
  *
  * @package Http
  * @author  Gonzalo Chumillas <gchumillas@email.com>
  * @license https://github.com/soloproyectos-php/http-controller/blob/master/LICENSE The MIT License (MIT)
  * @link    https://github.com/soloproyectos-php/http-controller
  */
-trait HttpControllerParamsTrait
+trait HttpControllerParamTrait
 {
     /**
      * Gets a parameter.
