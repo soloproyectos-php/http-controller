@@ -31,11 +31,9 @@ class HttpController extends EventMediator
      * 
      * This method is called at the beggining of the request.
      * 
-     * @param string[] $params Request parameters
-     * 
      * @return void
      */
-    public function init($params)
+    public function init()
     {
         // No-Op
     }
