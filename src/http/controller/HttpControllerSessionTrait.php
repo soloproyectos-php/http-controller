@@ -62,7 +62,7 @@ trait HttpControllerSessionTrait
     public function existSession($name)
     {
         $this->_startSession();
-        return Arr::is($_SESSION, $name);
+        return Arr::exist($_SESSION, $name);
     }
 
     /**
