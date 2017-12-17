@@ -41,11 +41,13 @@ trait HttpControllerCookieTrait
      *
      * @param string  $name           Cookie name
      * @param mixed   $value          Value
-     * @param integer $expirationTime Expiration time in seconds (default is one year)
+     * @param integer $expirationTime Expiration time in seconds (default is
+     *                                one year)
      *
      * @return void
      */
-    public function setCookie($name, $value, $expirationTime = null) {
+    public function setCookie($name, $value, $expirationTime = null)
+    {
         if ($expirationTime === null) {
             $expirationTime = $this->_defaultExpirationTime;
         }
