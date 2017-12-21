@@ -22,13 +22,14 @@ trait HttpControllerParamTrait
     /**
      * Gets a parameter.
      *
-     * @param string $name Parameter name
+     * @param string $name     Parameter name
+     * @param mixed  $defValue Default value (not required)
      *
      * @return mixed
      */
-    public function getParam($name)
+    public function getParam($name, $defValue = null)
     {
-        return Arr::get($_REQUEST, $name);
+        return Arr::get($_REQUEST, $name, $defValue);
     }
     
     /**

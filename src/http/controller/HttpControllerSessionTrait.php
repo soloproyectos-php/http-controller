@@ -23,14 +23,15 @@ trait HttpControllerSessionTrait
     /**
      * Gets a session attribute.
      *
-     * @param string $name Attribute name
+     * @param string $name     Attribute name
+     * @param mixed  $defValue Default value (not required)
      *
      * @return mixed
      */
-    public function getSession($name)
+    public function getSession($name, $defValue = null)
     {
         $this->_startSession();
-        return Arr::get($_SESSION, $name);
+        return Arr::get($_SESSION, $name, $defValue);
     }
 
     /**

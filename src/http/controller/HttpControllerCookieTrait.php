@@ -27,13 +27,14 @@ trait HttpControllerCookieTrait
     /**
      * Gets a cookie.
      *
-     * @param string $name Cookie name
+     * @param string $name     Cookie name
+     * @param mixed  $defValue Default value (not required)
      *
      * @return mixed
      */
-    public function getCookie($name)
+    public function getCookie($name, $defValue = null)
     {
-        return Arr::get($_COOKIE, $name);
+        return Arr::get($_COOKIE, $name, $defValue);
     }
 
     /**
