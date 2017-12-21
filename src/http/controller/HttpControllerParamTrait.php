@@ -28,13 +28,7 @@ trait HttpControllerParamTrait
      */
     public function getParam($name)
     {
-        $param = Arr::get($_REQUEST, $name);
-
-        if ($_SERVER["REQUEST_METHOD"] == "GET" && is_string($param)) {
-            $param = urldecode($param);
-        }
-
-        return $param;
+        return Arr::get($_REQUEST, $name);
     }
     
     /**
